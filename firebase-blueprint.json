@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "ChargingSession": {
+      "title": "ChargingSession",
+      "description": "A record of a completed charging session",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The UID of the user who requested the charge"
+        },
+        "date": {
+          "type": "string",
+          "format": "timestamp",
+          "description": "The server timestamp when the charge was recorded"
+        },
+        "location": {
+          "type": "string",
+          "description": "The location where the charge happened",
+          "maxLength": 100
+        },
+        "energyDelivered": {
+          "type": "number",
+          "description": "Amount of energy delivered in kWh"
+        }
+      },
+      "required": ["userId", "date", "location", "energyDelivered"]
+    }
+  },
+  "firestore": {
+    "/charging_sessions/{sessionId}": {
+      "schema": {
+        "$ref": "#/entities/ChargingSession"
+      },
+      "description": "Stores history of charging sessions per user"
+    }
+  }
+}

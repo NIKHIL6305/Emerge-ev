@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  --color-emerge-green: var(--emerge-green);
+  --color-emerge-dark: var(--emerge-dark);
+  --color-emerge-surface: var(--emerge-surface);
+  --color-emerge-surface-light: var(--emerge-surface-light);
+  
+  --color-white: var(--emerge-white);
+  --color-black: var(--emerge-black);
+  
+  --color-gray-50: var(--emerge-gray-50);
+  --color-gray-100: var(--emerge-gray-100);
+  --color-gray-200: var(--emerge-gray-200);
+  --color-gray-300: var(--emerge-gray-300);
+  --color-gray-400: var(--emerge-gray-400);
+  --color-gray-500: var(--emerge-gray-500);
+  --color-gray-600: var(--emerge-gray-600);
+  --color-gray-700: var(--emerge-gray-700);
+  --color-gray-800: var(--emerge-gray-800);
+  --color-gray-900: var(--emerge-gray-900);
+}
+
+:root {
+  --emerge-green: #4ade80;
+  --emerge-dark: #0a0a0a;
+  --emerge-surface: #171717;
+  --emerge-surface-light: #262626;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #1a3a25 0%, #0a0a0a 50%);
+  
+  --emerge-white: #ffffff;
+  --emerge-black: #000000;
+  
+  --emerge-gray-50: #f9fafb;
+  --emerge-gray-100: #f3f4f6;
+  --emerge-gray-200: #e5e7eb;
+  --emerge-gray-300: #d1d5db;
+  --emerge-gray-400: #9ca3af;
+  --emerge-gray-500: #6b7280;
+  --emerge-gray-600: #4b5563;
+  --emerge-gray-700: #374151;
+  --emerge-gray-800: #1f2937;
+  --emerge-gray-900: #111827;
+}
+
+:root.light {
+  --emerge-green: #16a34a;
+  --emerge-dark: #f0fdf4;
+  --emerge-surface: #ffffff;
+  --emerge-surface-light: #e2e8f0;
+  --bg-gradient: radial-gradient(circle at 50% 0%, #dcfce7 0%, #f0fdf4 50%);
+  
+  --emerge-white: #020617;
+  --emerge-black: #ffffff;
+  
+  --emerge-gray-50: #111827;
+  --emerge-gray-100: #1f2937;
+  --emerge-gray-200: #374151;
+  --emerge-gray-300: #4b5563;
+  --emerge-gray-400: #6b7280;
+  --emerge-gray-500: #9ca3af;
+  --emerge-gray-600: #d1d5db;
+  --emerge-gray-700: #e5e7eb;
+  --emerge-gray-800: #f3f4f6;
+  --emerge-gray-900: #f9fafb;
+}
+
+body {
+  @apply bg-emerge-dark text-white font-sans antialiased;
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Emerge EV",
+  "description": "On-demand emergency EV charging network delivering power whenever and wherever you need it.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
